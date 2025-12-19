@@ -53,12 +53,12 @@ const Header = () => {
             {/* Language Switcher */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center space-x-1 hover:text-accent transition-colors"
+              className="flex items-center space-x-2 hover:text-accent transition-colors"
               aria-label="Змінити мову"
             >
-              <span className={language === 'UA' ? 'font-bold' : ''}>UA</span>
+              <span className={language === 'UA' ? 'font-bold' : ''}>Українська</span>
               <span>/</span>
-              <span className={language === 'EN' ? 'font-bold' : ''}>EN</span>
+              <span className={language === 'EN' ? 'font-bold' : ''}>English</span>
             </button>
           </div>
         </div>
