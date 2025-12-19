@@ -7,6 +7,8 @@ export const translations = {
     'header.academy_full': 'Педагогічної Освіти',
     'header.search': 'Пошук',
     'header.menu': 'Меню',
+    'header.lang.ua': 'Українська',
+    'header.lang.en': 'English',
     
     // Navigation
     'nav.about': 'ПРО АКАДЕМІЮ',
@@ -71,6 +73,8 @@ export const translations = {
     'header.academy_full': 'of Pedagogical Education',
     'header.search': 'Search',
     'header.menu': 'Menu',
+    'header.lang.ua': 'Ukrainian',
+    'header.lang.en': 'Англійська',
     
     // Navigation
     'nav.about': 'ABOUT',
