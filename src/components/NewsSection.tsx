@@ -2,8 +2,10 @@ import { Calendar, ArrowRight, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { news } from '../data/news';
 import { formatDate } from '../utils/formatDate';
+import { useTranslation } from 'react-i18next';
 
 const NewsSection = () => {
+  const { t } = useTranslation('pages');
   // Show only first 4 news items
   const latestNews = news.slice(0, 4);
 
@@ -25,13 +27,13 @@ const NewsSection = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">
-            Новини та оголошення
+            {t('home.news.title')}
           </h2>
           <Link
             to="/news"
             className="flex items-center space-x-2 text-primary font-semibold hover:text-accent transition-colors"
           >
-            <span className="hidden sm:inline">Всі новини</span>
+            <span className="hidden sm:inline">{t('home.news.all_news')}</span>
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

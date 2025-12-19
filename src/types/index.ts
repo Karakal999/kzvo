@@ -1,4 +1,5 @@
 // Common types for the Academy of Pedagogical Education website
+import type { MultilingualContent } from '../utils/multilingualData';
 
 export interface Course {
   id: string;
@@ -31,8 +32,8 @@ export interface NewsItem {
 
 export interface Announcement {
   id: string;
-  title: string;
-  content: string;
+  title: string | MultilingualContent;
+  content: string | MultilingualContent;
   date: string;
   priority: 'urgent' | 'important' | 'normal';
   link?: string;
@@ -49,16 +50,16 @@ export interface Teacher {
 
 export interface CalendarEvent {
   id: string;
-  title: string;
+  title: string | MultilingualContent;
   date: string;
   endDate?: string;
   time?: string;
   endTime?: string;
   category: 'teachers' | 'students' | 'general';
-  type: string;
-  description?: string;
-  location?: string;
-  organizer?: string;
+  type: string | MultilingualContent;
+  description?: string | MultilingualContent;
+  location?: string | MultilingualContent;
+  organizer?: string | MultilingualContent;
   maxParticipants?: number;
   registeredParticipants?: number;
   registrationDeadline?: string;

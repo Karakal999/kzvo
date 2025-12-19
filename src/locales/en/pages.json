@@ -1,0 +1,172 @@
+{
+  "home": {
+    "title": "Academy of Pedagogical Education",
+    "subtitle": "Space for development of teachers and students",
+    "hero": {
+      "i_am_teacher": "I am a teacher",
+      "i_am_student": "I am a student",
+      "i_am_applicant": "I am an applicant"
+    },
+    "stats": {
+      "graduates": "Graduates annually",
+      "programs": "Educational programs",
+      "experience": "Years of experience"
+    },
+    "quick_access": {
+      "title": "Quick Access",
+      "for_teachers": "For Teachers",
+      "for_students": "For Students",
+      "for_applicants": "For Applicants"
+    },
+    "teachers": {
+      "courses": {
+        "title": "Professional Development Courses",
+        "description": "Training programs for educators"
+      },
+      "competition": {
+        "title": "Teacher of the Year Competition",
+        "description": "Annual professional excellence competition"
+      },
+      "nush": {
+        "title": "New Ukrainian School Materials",
+        "description": "Methodical materials for the New Ukrainian School"
+      }
+    },
+    "students": {
+      "olympiads": {
+        "title": "Olympiads",
+        "description": "National and international subject olympiads"
+      },
+      "competitions": {
+        "title": "Competitions",
+        "description": "Scientific competitions and creative contests"
+      },
+      "intellectual": {
+        "title": "Intellectual Competitions",
+        "description": "Team tournaments and brain rings"
+      }
+    },
+    "applicants": {
+      "master": {
+        "title": "Master's Program",
+        "description": "Graduate programs in education"
+      },
+      "schedule": {
+        "title": "Admission Schedule",
+        "description": "Deadlines and stages of admission"
+      },
+      "specialties": {
+        "title": "Specialties",
+        "description": "List of educational programs and specialties"
+      }
+    },
+    "news": {
+      "title": "News and Announcements",
+      "all_news": "All news"
+    },
+    "events": {
+      "title": "Events Calendar",
+      "view_calendar": "View calendar",
+      "filter_all": "All Events",
+      "filter_teachers": "For Teachers",
+      "filter_students": "For Students"
+    },
+    "cta": {
+      "title": "Ready to start learning?",
+      "description": "Join our academy and discover new opportunities for professional and personal growth",
+      "programs_button": "Educational Programs",
+      "contact_button": "Contact Us"
+    }
+  },
+  "about": {
+    "title": "About Academy",
+    "meta_description": "Academy of Pedagogical Education is a leading institution for professional development of educators in Ukraine.",
+    "history": {
+      "title": "Academy History",
+      "description": "The Academy has a long history of developing pedagogical education in Ukraine"
+    },
+    "structure": {
+      "title": "Academy Structure",
+      "departments": "Departments and Units"
+    },
+    "management": {
+      "title": "Management",
+      "rector": "Rector",
+      "vice_rectors": "Vice-Rectors"
+    }
+  },
+  "news": {
+    "title": "News",
+    "meta_description": "Latest news and events from the Academy of Pedagogical Education",
+    "latest": "Latest News",
+    "archive": "News Archive",
+    "categories": {
+      "all": "All Categories",
+      "announcements": "Announcements",
+      "events": "Events",
+      "achievements": "Achievements"
+    }
+  },
+  "education": {
+    "title": "Educational Programs",
+    "meta_description": "Educational programs and professional development courses for educators",
+    "programs": {
+      "title": "Study Programs",
+      "bachelor": "Bachelor's Degree",
+      "master": "Master's Degree",
+      "qualification": "Professional Development"
+    },
+    "admission": {
+      "title": "Admission",
+      "requirements": "Admission Requirements",
+      "documents": "Required Documents",
+      "deadline": "Application Deadlines"
+    }
+  },
+  "teachers": {
+    "title": "For Teachers",
+    "meta_description": "Resources and professional development opportunities for educators",
+    "development": {
+      "title": "Professional Development",
+      "courses": "Professional Development Courses",
+      "webinars": "Webinars",
+      "trainings": "Trainings"
+    },
+    "events": {
+      "title": "Events",
+      "upcoming": "Upcoming Events",
+      "past": "Past Events",
+      "register": "Register"
+    }
+  },
+  "students": {
+    "title": "For Students",
+    "meta_description": "Olympiads, competitions and educational opportunities for students",
+    "competitions": {
+      "title": "Competitions and Olympiads",
+      "olympiads": "Subject Olympiads",
+      "competitions": "Competitions",
+      "results": "Results"
+    }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "meta_description": "Contact information for the Academy of Pedagogical Education",
+    "get_in_touch": "Get in Touch",
+    "address_title": "Address",
+    "phone_title": "Phone",
+    "email_title": "Email",
+    "working_hours": "Working Hours",
+    "form": {
+      "title": "Send Message",
+      "success": "Message sent successfully",
+      "error": "Error sending message"
+    }
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist",
+    "go_home": "Go to Home"
+  }
+}
+

@@ -1,0 +1,121 @@
+{
+  "page_title": "Olympiads and Competitions",
+  "page_description": "National and international olympiads, competitions, and contests for students and teachers. Information about stages, registration, past tasks, and results.",
+  
+  "teacher_of_year": {
+    "title": "Teacher of the Year - 2025",
+    "subtitle": "National competition of pedagogical excellence for teachers and educators",
+    "period": "September 2024 - April 2025",
+    "nominations_count": "6 nominations",
+    
+    "about": {
+      "title": "About the Competition",
+      "description": "The National \"Teacher of the Year\" competition is a prestigious annual contest for educators aimed at identifying, supporting, and promoting best practices in education. The competition has been held since 1992 and is an important platform for professional growth of teachers.",
+      "years_tradition": "Years of tradition",
+      "participants_yearly": "Participants annually"
+    },
+    
+    "stages": {
+      "title": "Competition Stages",
+      "stage_1": {
+        "title": "Stage I - School",
+        "period": "September - October",
+        "description": "Competition held in educational institutions. Winners from each school advance to the next stage.",
+        "tasks": ["Self-presentation", "Open Lesson", "Portfolio"]
+      },
+      "stage_2": {
+        "title": "Stage II - District/City",
+        "period": "November - December",
+        "description": "Competition among school stage winners at the district or city level.",
+        "tasks": ["Open Lesson", "Educational Event", "Presentation of Pedagogical Experience"]
+      },
+      "stage_3": {
+        "title": "Stage III - Regional",
+        "period": "January - February",
+        "description": "Regional stage of the competition. Winners represent the region at the national stage.",
+        "tasks": ["Master Class", "Round Table", "Innovative Project Defense"]
+      },
+      "stage_4": {
+        "title": "Stage IV - National",
+        "period": "March - April",
+        "description": "Final stage of the competition with determination of winners in each nomination.",
+        "tasks": ["Open Lesson", "Master Class", "Experience Presentation", "Public Speech"]
+      },
+      "tasks_label": "Competition Tasks:"
+    },
+    
+    "nominations": {
+      "title": "Competition Nominations",
+      "ukrainian_language": "Ukrainian Language and Literature",
+      "mathematics": "Mathematics",
+      "foreign_language": "Foreign Language",
+      "primary_teacher": "Primary School Teacher",
+      "class_teacher": "Class Teacher",
+      "preschool_teacher": "Preschool Educator"
+    },
+    
+    "requirements": {
+      "title": "Participant Requirements",
+      "list": [
+        "Higher education",
+        "Pedagogical work experience of at least 3 years",
+        "Certification (category)",
+        "No disciplinary actions",
+        "Innovative pedagogical activity",
+        "High student learning outcomes"
+      ]
+    },
+    
+    "winners_2023": {
+      "title": "Winners of 2023",
+      "award_label": "Winner",
+      "winner_1": {
+        "name": "Olga Petrenko",
+        "nomination": "Ukrainian Language and Literature",
+        "school": "Gymnasium #42, Kyiv"
+      },
+      "winner_2": {
+        "name": "Dmytro Kovalenko",
+        "nomination": "Mathematics",
+        "school": "Lyceum #15, Lviv"
+      },
+      "winner_3": {
+        "name": "Svitlana Melnyk",
+        "nomination": "Foreign Language",
+        "school": "School #8, Odesa"
+      }
+    },
+    
+    "documents": {
+      "title": "Competition Documents",
+      "download": "Download",
+      "list": {
+        "regulations": "Regulations for \"Teacher of the Year - 2025\" Competition",
+        "application": "Application for Participation",
+        "portfolio_requirements": "Portfolio Requirements",
+        "evaluation_criteria": "Evaluation Criteria",
+        "methodical_recommendations": "Methodological Recommendations"
+      }
+    },
+    
+    "videos": {
+      "title": "Video Materials",
+      "opening_2023": {
+        "title": "2023 Competition Opening",
+        "description": "Solemn opening ceremony of the national stage"
+      },
+      "masterclasses": {
+        "title": "Winners' Master Classes",
+        "description": "Best pedagogical practices from winners"
+      }
+    },
+    
+    "cta": {
+      "title": "Ready to Participate?",
+      "description": "Registration for \"Teacher of the Year - 2025\" competition will begin in September 2024. Stay tuned for updates on our website.",
+      "subscribe_button": "Subscribe to Updates",
+      "contact_button": "Contact Us"
+    }
+  }
+}
+

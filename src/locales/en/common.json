@@ -1,0 +1,108 @@
+{
+  "buttons": {
+    "read_more": "Read more",
+    "download": "Download",
+    "register": "Register",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "view_all": "View all",
+    "show_more": "Show more",
+    "show_less": "Show less",
+    "preview": "Preview",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "apply": "Apply",
+    "reset": "Reset"
+  },
+  "announcements": {
+    "urgent": "Urgent!",
+    "important": "Important!",
+    "info": "Information",
+    "read_more": "Read more",
+    "previous": "Previous announcement",
+    "next": "Next announcement",
+    "go_to": "Go to announcement",
+    "pause": "Pause",
+    "resume": "Resume",
+    "auto_change": "automatic change"
+  },
+  "labels": {
+    "category": "Category",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "author": "Author",
+    "status": "Status",
+    "all": "All",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "subject": "Subject",
+    "description": "Description",
+    "title": "Title",
+    "language": "Language"
+  },
+  "status": {
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "empty": "No data available",
+    "not_found": "Not found",
+    "coming_soon": "Coming soon"
+  },
+  "errors": {
+    "general": "Something went wrong. Please try again.",
+    "network": "Connection error. Check your internet.",
+    "not_found": "Page not found",
+    "required_field": "This field is required",
+    "invalid_email": "Invalid email format",
+    "invalid_phone": "Invalid phone format",
+    "file_too_large": "File is too large",
+    "file_format": "Invalid file format",
+    "submission_failed": "Failed to submit form"
+  },
+  "validation": {
+    "required": "Required field",
+    "email": "Enter a valid email",
+    "phone": "Enter a valid phone number",
+    "min_length": "Minimum length: {{count}} characters",
+    "max_length": "Maximum length: {{count}} characters",
+    "invalid_format": "Invalid format"
+  },
+  "placeholders": {
+    "search": "Enter search query...",
+    "name": "Enter your name",
+    "email": "Enter your email",
+    "phone": "Enter phone number",
+    "message": "Enter your message",
+    "select": "Select from list...",
+    "date": "Select date",
+    "search_news": "Search news...",
+    "search_events": "Search events...",
+    "search_documents": "Search documents..."
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "days_ago": "{{count}} days ago",
+    "hours_ago": "{{count}} hours ago",
+    "minutes_ago": "{{count}} minutes ago",
+    "just_now": "Just now"
+  },
+  "confirmation": {
+    "delete": "Are you sure you want to delete?",
+    "cancel": "Are you sure you want to cancel?",
+    "leave": "Changes will not be saved. Continue?"
+  }
+}
+

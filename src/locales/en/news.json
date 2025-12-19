@@ -1,0 +1,47 @@
+{
+  "title": "News",
+  "meta_description": "Latest news and events from the Academy of Pedagogical Education",
+  "latest": "Latest News",
+  "archive": "News Archive",
+  "featured": "Featured News",
+  "categories": {
+    "all": "All Categories",
+    "announcements": "Announcements",
+    "events": "Events",
+    "achievements": "Achievements",
+    "education": "Education",
+    "science": "Science",
+    "international": "International Cooperation"
+  },
+  "filters": {
+    "title": "Filters",
+    "category": "Category",
+    "date": "Date",
+    "search": "Search news"
+  },
+  "article": {
+    "published": "Published",
+    "updated": "Updated",
+    "author": "Author",
+    "category": "Category",
+    "tags": "Tags",
+    "share": "Share",
+    "related": "Related News",
+    "back_to_news": "Back to News"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of",
+    "showing": "Showing",
+    "results": "results"
+  },
+  "empty": {
+    "title": "No news found",
+    "description": "Try changing filters or search query",
+    "button": "Reset Filters"
+  },
+  "load_more": "Load More"
+}
+

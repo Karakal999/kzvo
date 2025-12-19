@@ -1,0 +1,76 @@
+{
+  "header": {
+    "email": "info@academy.ua",
+    "phone": "+380 (44) 123-45-67",
+    "academy": "Академія",
+    "academy_full": "Педагогічної Освіти",
+    "search": "Пошук",
+    "menu": "Меню",
+    "lang_ua": "Українська",
+    "lang_en": "English"
+  },
+  "menu": {
+    "about": "ПРО АКАДЕМІЮ",
+    "activity": "ДІЯЛЬНІСТЬ",
+    "education": "ОСВІТА ПРОГРАМИ",
+    "teachers": "ВЧИТЕЛЮ",
+    "students": "УЧНЯМ/КОНКУРСИ",
+    "resources": "РЕСУРСИ",
+    "news": "НОВИНИ",
+    "contacts": "КОНТАКТИ"
+  },
+  "submenu": {
+    "about": {
+      "history": "Історія",
+      "structure": "Структура",
+      "management": "Керівництво",
+      "documents": "Документи",
+      "public_info": "Публічна інформація"
+    },
+    "activity": {
+      "science": "Наукова діяльність",
+      "international": "Міжнародна діяльність",
+      "projects": "Проекти",
+      "conferences": "Конференції"
+    },
+    "education": {
+      "programs": "Освітні програми",
+      "higher_education": "Вища освіта",
+      "qualification": "Підвищення кваліфікації",
+      "calendar": "Академічний календар"
+    },
+    "teachers": {
+      "development": "Професійний розвиток",
+      "events": "Події",
+      "journal": "Наукові видання",
+      "nush": "НУШ"
+    },
+    "students": {
+      "olympiads": "Олімпіади",
+      "competitions": "Конкурси",
+      "teacher_year": "Вчитель року",
+      "results": "Результати"
+    },
+    "resources": {
+      "library": "Бібліотека",
+      "media": "Медіатека",
+      "documents": "Документи",
+      "links": "Корисні посилання"
+    }
+  },
+  "footer": {
+    "about_academy": "Про академію",
+    "description": "Академія педагогічної освіти — провідний заклад підвищення кваліфікації педагогічних працівників України.",
+    "quick_links": "Швидкі посилання",
+    "contacts": "Контакти",
+    "address": "вул. Педагогічна, 15, Київ, 01001",
+    "follow_us": "Соціальні мережі",
+    "rights": "Всі права захищені",
+    "privacy": "Політика конфіденційності",
+    "terms": "Умови використання"
+  },
+  "breadcrumbs": {
+    "home": "Головна"
+  }
+}
+

@@ -1,0 +1,76 @@
+{
+  "header": {
+    "email": "info@academy.ua",
+    "phone": "+380 (44) 123-45-67",
+    "academy": "Academy",
+    "academy_full": "of Pedagogical Education",
+    "search": "Search",
+    "menu": "Menu",
+    "lang_ua": "Ukrainian",
+    "lang_en": "English"
+  },
+  "menu": {
+    "about": "ABOUT",
+    "activity": "ACTIVITY",
+    "education": "EDUCATION",
+    "teachers": "FOR TEACHERS",
+    "students": "FOR STUDENTS",
+    "resources": "RESOURCES",
+    "news": "NEWS",
+    "contacts": "CONTACTS"
+  },
+  "submenu": {
+    "about": {
+      "history": "History",
+      "structure": "Structure",
+      "management": "Management",
+      "documents": "Documents",
+      "public_info": "Public Information"
+    },
+    "activity": {
+      "science": "Scientific Activity",
+      "international": "International Activity",
+      "projects": "Projects",
+      "conferences": "Conferences"
+    },
+    "education": {
+      "programs": "Educational Programs",
+      "higher_education": "Higher Education",
+      "qualification": "Professional Development",
+      "calendar": "Academic Calendar"
+    },
+    "teachers": {
+      "development": "Professional Development",
+      "events": "Events",
+      "journal": "Scientific Publications",
+      "nush": "New Ukrainian School"
+    },
+    "students": {
+      "olympiads": "Olympiads",
+      "competitions": "Competitions",
+      "teacher_year": "Teacher of the Year",
+      "results": "Results"
+    },
+    "resources": {
+      "library": "Library",
+      "media": "Media Library",
+      "documents": "Documents",
+      "links": "Useful Links"
+    }
+  },
+  "footer": {
+    "about_academy": "About Academy",
+    "description": "Academy of Pedagogical Education is a leading institution for professional development of educators in Ukraine.",
+    "quick_links": "Quick Links",
+    "contacts": "Contacts",
+    "address": "15 Pedagogichna St., Kyiv, 01001",
+    "follow_us": "Social Media",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  }
+}
+

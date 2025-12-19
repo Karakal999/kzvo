@@ -1,124 +1,144 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import { useLanguageRoute } from '../hooks/useLanguageRoute';
 
 interface SEOHeadProps {
   title: string;
   description: string;
-  keywords?: string;
-  ogImage?: string;
-  ogType?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  keywords?: string[];
+  noindex?: boolean;
   canonical?: string;
 }
 
+/**
+ * SEO Component with multilingual support
+ * 
+ * Features:
+ * - Meta tags (title, description, keywords)
+ * - Open Graph tags
+ * - Twitter Card tags
+ * - hreflang tags for language alternatives
+ * - Canonical URL
+ * 
+ * @example
+ * <SEOHead
+ *   title="About Us"
+ *   description="Learn more about our academy"
+ *   image="/images/about.jpg"
+ * />
+ */
 const SEOHead = ({
   title,
   description,
+  image,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author,
   keywords,
-  ogImage = '/og-default.jpg',
-  ogType = 'website',
+  noindex = false,
   canonical,
 }: SEOHeadProps) => {
-  const fullTitle = `${title} | Академія Педагогічної Освіти`;
-  const siteUrl = 'https://academy.edu.ua'; // Replace with actual domain
+  const location = useLocation();
+  const { lang } = useLanguageRoute();
 
-  useEffect(() => {
-    // Update document title
-    document.title = fullTitle;
+  // Base URL - should be from environment
+  const baseUrl = import.meta.env.VITE_BASE_URL || 'https://academy.ua';
+  
+  // Current URL
+  const currentUrl = `${baseUrl}${location.pathname}`;
+  
+  // Canonical URL (custom or current)
+  const canonicalUrl = canonical || currentUrl;
+  
+  // Image URL (absolute)
+  const imageUrl = image?.startsWith('http') ? image : `${baseUrl}${image}`;
+  
+  // Site name
+  const siteName = 'Академія Педагогічної Освіти | Academy of Pedagogical Education';
+  
+  // Full title
+  const fullTitle = `${title} | ${siteName}`;
+  
+  // Get path without language prefix
+  const pathWithoutLang = location.pathname.replace(/^\/(uk|en)/, '') || '/';
+  
+  // Language alternatives
+  const alternateUrls = {
+    uk: `${baseUrl}/uk${pathWithoutLang}`,
+    en: `${baseUrl}/en${pathWithoutLang}`,
+  };
 
-    // Update or create meta tags
-    const updateMetaTag = (name: string, content: string, isProperty = false) => {
-      const attribute = isProperty ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      {keywords && keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(', ')} />
+      )}
+      {author && <meta name="author" content={author} />}
       
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, name);
-        document.head.appendChild(meta);
-      }
+      {/* Language */}
+      <html lang={lang || 'uk'} />
       
-      meta.setAttribute('content', content);
-    };
-
-    // Basic meta tags
-    updateMetaTag('description', description);
-    if (keywords) {
-      updateMetaTag('keywords', keywords);
-    }
-
-    // Open Graph tags
-    updateMetaTag('og:title', fullTitle, true);
-    updateMetaTag('og:description', description, true);
-    updateMetaTag('og:type', ogType, true);
-    updateMetaTag('og:image', `${siteUrl}${ogImage}`, true);
-    updateMetaTag('og:url', canonical || window.location.href, true);
-    updateMetaTag('og:site_name', 'Академія Педагогічної Освіти', true);
-
-    // Twitter Card tags
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', fullTitle);
-    updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', `${siteUrl}${ogImage}`);
-
-    // Additional SEO tags
-    updateMetaTag('robots', 'index, follow');
-    updateMetaTag('language', 'Ukrainian');
-    updateMetaTag('author', 'Академія Педагогічної Освіти');
-
-    // Canonical link
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', canonical || window.location.href);
-  }, [title, description, keywords, ogImage, ogType, canonical, fullTitle, siteUrl]);
-
-  return null; // This component doesn't render anything
+      {/* Robots */}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Canonical */}
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Hreflang Tags */}
+      <link rel="alternate" hrefLang="uk" href={alternateUrls.uk} />
+      <link rel="alternate" hrefLang="en" href={alternateUrls.en} />
+      <link rel="alternate" hrefLang="x-default" href={alternateUrls.uk} />
+      
+      {/* Open Graph */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'uk_UA'} />
+      <meta property="og:locale:alternate" content={lang === 'en' ? 'uk_UA' : 'en_US'} />
+      
+      {image && (
+        <>
+          <meta property="og:image" content={imageUrl} />
+          <meta property="og:image:alt" content={title} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+        </>
+      )}
+      
+      {type === 'article' && (
+        <>
+          {publishedTime && (
+            <meta property="article:published_time" content={publishedTime} />
+          )}
+          {modifiedTime && (
+            <meta property="article:modified_time" content={modifiedTime} />
+          )}
+          {author && <meta property="article:author" content={author} />}
+        </>
+      )}
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={imageUrl} />}
+      
+      {/* Additional Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="theme-color" content="#1e40af" />
+    </Helmet>
+  );
 };
 
 export default SEOHead;
-
-// Predefined SEO data for common pages
-export const SEO_DATA = {
-  home: {
-    title: 'Головна',
-    description: 'Академія педагогічної освіти - провідний заклад підвищення кваліфікації вчителів України. Курси, олімпіади, конкурси та освітні програми.',
-    keywords: 'академія освіти, підвищення кваліфікації, курси для вчителів, освітні програми, олімпіади, конкурси',
-  },
-  about: {
-    title: 'Про Академію',
-    description: 'Історія, керівництво та структура Академії педагогічної освіти. Дізнайтеся більше про наш заклад та його діяльність.',
-    keywords: 'про академію, історія, керівництво, структура, педагогічна освіта',
-  },
-  programs: {
-    title: 'Освітні програми',
-    description: 'Курси підвищення кваліфікації, магістратура та аспірантура. Вибирайте програму для професійного розвитку.',
-    keywords: 'освітні програми, підвищення кваліфікації, магістратура, аспірантура, курси',
-  },
-  competitions: {
-    title: 'Олімпіади та конкурси',
-    description: 'Всеукраїнські олімпіади, творчі конкурси та інтелектуальні змагання для учнів. Конкурс "Вчитель року".',
-    keywords: 'олімпіади, конкурси, вчитель року, інтелектуальні змагання, учні',
-  },
-  resources: {
-    title: 'Ресурси та документи',
-    description: 'Нормативні документи, методичні матеріали, навчальні програми та корисні ресурси для вчителів.',
-    keywords: 'нормативні документи, методичні матеріали, НУШ, ресурси для вчителів',
-  },
-  news: {
-    title: 'Новини',
-    description: 'Актуальні новини та оголошення Академії педагогічної освіти. Слідкуйте за подіями у сфері освіти.',
-    keywords: 'новини, оголошення, події, освіта, академія',
-  },
-  events: {
-    title: 'Календар подій',
-    description: 'Розклад олімпіад, конкурсів, конференцій та інших освітніх заходів. Плануйте вашу участь.',
-    keywords: 'календар подій, події, конференції, семінари, олімпіади',
-  },
-  contacts: {
-    title: 'Контакти',
-    description: 'Контактна інформація Академії педагогічної освіти. Адреса, телефони, email та карта проїзду.',
-    keywords: 'контакти, адреса, телефон, email, як нас знайти',
-  },
-};
-

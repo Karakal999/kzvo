@@ -15,7 +15,7 @@
 
 ```
 src/
-├── components/     # Переиспользовані компоненти (Header, Footer)
+├── components/     # Повторно використовувані компоненти (Header, Footer)
 ├── layouts/       # Макети сторінок (MainLayout)
 ├── pages/         # Сторінки сайту (Home, About, Programs, тощо)
 ├── hooks/         # Кастомні React хуки
@@ -52,13 +52,13 @@ npm run dev
 
 Додаток буде доступний за адресою `http://localhost:5173`
 
-### Збірка для продакшену
+### Збірка для production
 
 ```bash
 npm run build
 ```
 
-### Попередній перегляд продакшен-збірки
+### Попередній перегляд production-збірки
 
 ```bash
 npm run preview
@@ -103,6 +103,36 @@ export interface MyType {
   name: string;
 }
 ```
+
+## 🧪 Testing
+
+### Unit Tests
+```bash
+npm run test              # Run tests
+npm run test:ui           # Run tests with UI
+npm run test:coverage     # Run tests with coverage
+```
+
+### E2E Tests
+```bash
+npm run cypress:open      # Open Cypress UI
+npm run cypress:run       # Run Cypress headless
+npm run test:e2e          # Run full E2E suite
+```
+
+### Translation Validation
+```bash
+npm run i18n:validate     # Validate translations
+npm run i18n:performance  # Check performance
+```
+
+**Test Coverage:**
+- ✅ 16 unit tests (100% passing)
+- ✅ 20+ E2E scenarios
+- ✅ Translation validation
+- ✅ Performance monitoring
+
+See [TESTING_I18N.md](./TESTING_I18N.md) for detailed testing guide.
 
 ## Ліцензія
 

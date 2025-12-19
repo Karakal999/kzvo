@@ -4,16 +4,20 @@ import { Link } from 'react-router-dom';
 import type { CalendarEvent } from '../types';
 import { calendarEvents } from '../data/events';
 import { formatDate } from '../utils/formatDate';
+import { useTranslation } from 'react-i18next';
+import { useMultilingualContent } from '../utils/multilingualData';
 
 type FilterTab = 'all' | 'teachers' | 'students';
 
 const CalendarWidget = () => {
+  const { t } = useTranslation('pages');
+  const { getContent } = useMultilingualContent();
   const [activeTab, setActiveTab] = useState<FilterTab>('all');
 
   const tabs = [
-    { id: 'all' as FilterTab, label: 'Всі події' },
-    { id: 'teachers' as FilterTab, label: 'Для вчителів' },
-    { id: 'students' as FilterTab, label: 'Для учнів' },
+    { id: 'all' as FilterTab, label: t('home.events.filter_all') || 'Всі події' },
+    { id: 'teachers' as FilterTab, label: t('home.events.filter_teachers') || 'Для вчителів' },
+    { id: 'students' as FilterTab, label: t('home.events.filter_students') || 'Для учнів' },
   ];
 
   const filteredEvents = calendarEvents
@@ -37,11 +41,11 @@ const CalendarWidget = () => {
   const getCategoryLabel = (category: CalendarEvent['category']) => {
     switch (category) {
       case 'teachers':
-        return 'Для вчителів';
+        return t('home.events.filter_teachers');
       case 'students':
-        return 'Для учнів';
+        return t('home.events.filter_students');
       default:
-        return 'Загальне';
+        return t('home.events.filter_all');
     }
   };
 
@@ -54,7 +58,7 @@ const CalendarWidget = () => {
             <Calendar className="h-6 w-6 text-primary" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
-            Календар подій
+            {t("home.events.title")}
           </h2>
         </div>
       </div>
@@ -102,19 +106,19 @@ const CalendarWidget = () => {
             <div className="flex items-center space-x-1 mb-2">
               <Tag className="h-4 w-4 text-accent" />
               <span className="text-sm font-semibold text-accent">
-                {event.type}
+                {getContent(event.type)}
               </span>
             </div>
 
             {/* Title */}
             <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-primary transition-colors">
-              {event.title}
+              {getContent(event.title)}
             </h3>
 
             {/* Description */}
             {event.description && (
               <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                {event.description}
+                {getContent(event.description)}
               </p>
             )}
 
@@ -122,7 +126,7 @@ const CalendarWidget = () => {
             {event.location && (
               <div className="flex items-center space-x-1 text-sm text-gray-500">
                 <MapPin className="h-4 w-4" />
-                <span>{event.location}</span>
+                <span>{getContent(event.location)}</span>
               </div>
             )}
           </div>
@@ -135,7 +139,7 @@ const CalendarWidget = () => {
           to="/events"
           className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-blue-900 transition-colors"
         >
-          <span>Весь календар</span>
+          <span>{t("home.events.view_calendar")}</span>
           <ArrowRight className="h-5 w-5" />
         </Link>
       </div>

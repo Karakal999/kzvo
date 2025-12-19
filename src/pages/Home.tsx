@@ -3,34 +3,39 @@ import { Link } from 'react-router-dom';
 import CalendarWidget from '../components/CalendarWidget';
 import NewsSection from '../components/NewsSection';
 import Announcements from '../components/Announcements';
-import { useLanguage } from '../context/LanguageContext';
-import { translations } from '../locales/translations';
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const Home = () => {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { t, i18n } = useTranslation('pages');
+  
+  // Force re-render when language changes
+  useEffect(() => {
+    console.log('[Home] Current language:', i18n.language);
+    console.log('[Home] Test translation:', t('home.title'));
+  }, [i18n.language, t]);
   const audienceButtons = [
-    { id: 'teacher', label: t['home.i_am_teacher'], icon: <GraduationCap className="h-6 w-6" /> },
-    { id: 'student', label: t['home.i_am_student'], icon: <BookOpen className="h-6 w-6" /> },
-    { id: 'applicant', label: t['home.i_am_applicant'], icon: <Users className="h-6 w-6" /> },
+    { id: 'teacher', label: t('home.hero.i_am_teacher'), icon: <GraduationCap className="h-6 w-6" /> },
+    { id: 'student', label: t('home.hero.i_am_student'), icon: <BookOpen className="h-6 w-6" /> },
+    { id: 'applicant', label: t('home.hero.i_am_applicant'), icon: <Users className="h-6 w-6" /> },
   ];
 
   const quickLinksTeachers = [
     {
-      title: 'Курси підвищення кваліфікації',
-      description: 'Програми професійного розвитку для педагогів',
+      title: t('home.teachers.courses.title'),
+      description: t('home.teachers.courses.description'),
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       url: '/teachers',
     },
     {
-      title: 'Конкурс "Вчитель року"',
-      description: 'Щорічний конкурс професійної майстерності',
+      title: t('home.teachers.competition.title'),
+      description: t('home.teachers.competition.description'),
       icon: <Award className="h-8 w-8 text-primary" />,
       url: '/teachers',
     },
     {
-      title: 'Матеріали НУШ',
-      description: 'Методичні розробки для Нової української школи',
+      title: t('home.teachers.nush.title'),
+      description: t('home.teachers.nush.description'),
       icon: <FileText className="h-8 w-8 text-primary" />,
       url: '/resources',
     },
@@ -38,20 +43,20 @@ const Home = () => {
 
   const quickLinksStudents = [
     {
-      title: 'Олімпіади',
-      description: 'Всеукраїнські та міжнародні предметні олімпіади',
+      title: t('home.students.olympiads.title'),
+      description: t('home.students.olympiads.description'),
       icon: <Trophy className="h-8 w-8 text-accent" />,
       url: '/students',
     },
     {
-      title: 'Конкурси',
-      description: 'Наукові конкурси та творчі змагання',
+      title: t('home.students.competitions.title'),
+      description: t('home.students.competitions.description'),
       icon: <Award className="h-8 w-8 text-accent" />,
       url: '/students',
     },
     {
-      title: 'Інтелектуальні змагання',
-      description: 'Командні турніри та брейн-ринги',
+      title: t('home.students.intellectual.title'),
+      description: t('home.students.intellectual.description'),
       icon: <Users className="h-8 w-8 text-accent" />,
       url: '/students',
     },
@@ -59,20 +64,20 @@ const Home = () => {
 
   const quickLinksApplicants = [
     {
-      title: 'Магістратура',
-      description: 'Програми магістратури в галузі освіти',
+      title: t('home.applicants.master.title'),
+      description: t('home.applicants.master.description'),
       icon: <GraduationCap className="h-8 w-8 text-primary" />,
       url: '/education',
     },
     {
-      title: 'Графік вступної кампанії',
-      description: 'Терміни та етапи вступу до академії',
+      title: t('home.applicants.schedule.title'),
+      description: t('home.applicants.schedule.description'),
       icon: <Calendar className="h-8 w-8 text-primary" />,
       url: '/contacts',
     },
     {
-      title: 'Спеціальності',
-      description: 'Перелік освітніх програм та спеціальностей',
+      title: t('home.applicants.specialties.title'),
+      description: t('home.applicants.specialties.description'),
       icon: <Briefcase className="h-8 w-8 text-primary" />,
       url: '/education',
     },
@@ -100,12 +105,12 @@ const Home = () => {
 
             {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              {t['home.title']}
+              {t('home.title')}
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              {t['home.subtitle']}
+              {t('home.subtitle')}
             </p>
 
             {/* Audience Selector Buttons */}
@@ -125,15 +130,15 @@ const Home = () => {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-accent mb-1">500+</div>
-                <div className="text-sm">{t['home.graduates']}</div>
+                <div className="text-sm">{t('home.stats.graduates')}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-accent mb-1">50+</div>
-                <div className="text-sm">{t['home.programs']}</div>
+                <div className="text-sm">{t('home.stats.programs')}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-accent mb-1">25+</div>
-                <div className="text-sm">{t['home.experience']}</div>
+                <div className="text-sm">{t('home.stats.experience')}</div>
               </div>
             </div>
           </div>
@@ -170,7 +175,7 @@ const Home = () => {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            {t['home.quick_access']}
+            {t('home.quick_access.title')}
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -180,7 +185,7 @@ const Home = () => {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <GraduationCap className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">{t['home.for_teachers']}</h3>
+                <h3 className="text-2xl font-bold text-primary">{t('home.quick_access.for_teachers')}</h3>
               </div>
               <div className="space-y-4">
                 {quickLinksTeachers.map((link, index) => (
@@ -211,7 +216,7 @@ const Home = () => {
                 <div className="p-3 bg-accent/10 rounded-lg">
                   <BookOpen className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Для учнів</h3>
+                <h3 className="text-2xl font-bold text-primary">{t('home.quick_access.for_students')}</h3>
               </div>
               <div className="space-y-4">
                 {quickLinksStudents.map((link, index) => (
@@ -242,7 +247,7 @@ const Home = () => {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">{t['home.for_applicants']}</h3>
+                <h3 className="text-2xl font-bold text-primary">{t('home.quick_access.for_applicants')}</h3>
               </div>
               <div className="space-y-4">
                 {quickLinksApplicants.map((link, index) => (
@@ -277,23 +282,23 @@ const Home = () => {
       <section className="py-16 bg-gradient-to-r from-primary to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Готові розпочати навчання?
+            {t('home.cta.title')}
           </h2>
           <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Приєднуйтесь до нашої академії та відкрийте нові можливості для професійного та особистісного зростання
+            {t('home.cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/education"
               className="px-8 py-4 bg-accent text-primary rounded-lg font-bold text-lg hover:bg-accent/90 transition-colors inline-block"
             >
-              Освітні програми
+              {t('home.cta.programs_button')}
             </Link>
             <Link
               to="/contacts"
               className="px-8 py-4 bg-white text-primary rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors inline-block"
             >
-              Зв'язатися з нами
+              {t('home.cta.contact_button')}
             </Link>
           </div>
         </div>

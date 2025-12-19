@@ -1,18 +1,22 @@
 import type { CalendarEvent } from '../types';
+import { ml } from '../utils/multilingualData';
 
 export const calendarEvents: CalendarEvent[] = [
   // Teachers events
   {
     id: '1',
-    title: 'Вебінар: Сучасні методи викладання',
+    title: ml('Вебінар: Сучасні методи викладання', 'Webinar: Modern Teaching Methods'),
     date: '2024-12-25',
     time: '10:00',
     endTime: '12:00',
     category: 'teachers',
-    type: 'Вебінар',
-    description: 'Онлайн-вебінар для вчителів про інноваційні підходи до навчання в початковій школі.',
-    location: 'Онлайн (Zoom)',
-    organizer: 'Відділ підвищення кваліфікації',
+    type: ml('Вебінар', 'Webinar'),
+    description: ml(
+      'Онлайн-вебінар для вчителів про інноваційні підходи до навчання в початковій школі.',
+      'Online webinar for teachers about innovative approaches to primary school teaching.'
+    ),
+    location: ml('Онлайн (Zoom)', 'Online (Zoom)'),
+    organizer: ml('Відділ підвищення кваліфікації', 'Professional Development Department'),
     maxParticipants: 100,
     registeredParticipants: 67,
     registrationDeadline: '2024-12-24',
@@ -20,15 +24,18 @@ export const calendarEvents: CalendarEvent[] = [
   },
   {
     id: '2',
-    title: 'Курс підвищення кваліфікації: Цифрові технології',
+    title: ml('Курс підвищення кваліфікації: Цифрові технології', 'Professional Development Course: Digital Technologies'),
     date: '2025-01-10',
     endDate: '2025-03-15',
     time: '14:00',
     category: 'teachers',
-    type: 'Курс',
-    description: 'Тримісячний курс з впровадження цифрових технологій в освітній процес.',
-    location: 'Академія, корп. 2, ауд. 305',
-    organizer: 'Кафедра ІТ в освіті',
+    type: ml('Курс', 'Course'),
+    description: ml(
+      'Тримісячний курс з впровадження цифрових технологій в освітній процес.',
+      'Three-month course on implementing digital technologies in the educational process.'
+    ),
+    location: ml('Академія, корп. 2, ауд. 305', 'Academy, building 2, room 305'),
+    organizer: ml('Кафедра ІТ в освіті', 'Department of IT in Education'),
     maxParticipants: 25,
     registeredParticipants: 18,
     registrationDeadline: '2025-01-05',
@@ -36,15 +43,18 @@ export const calendarEvents: CalendarEvent[] = [
   },
   {
     id: '3',
-    title: 'Семінар з НУШ: Практичний досвід',
+    title: ml('Семінар з НУШ: Практичний досвід', 'NUSh Seminar: Practical Experience'),
     date: '2025-01-20',
     time: '09:00',
     endTime: '16:00',
     category: 'teachers',
-    type: 'Семінар',
-    description: 'Обмін досвідом впровадження Нової української школи.',
-    location: 'Київ, конференц-зал "Академ"',
-    organizer: 'Науково-методичний центр НУШ',
+    type: ml('Семінар', 'Seminar'),
+    description: ml(
+      'Обмін досвідом впровадження Нової української школи.',
+      'Exchange of experience in implementing the New Ukrainian School.'
+    ),
+    location: ml('Київ, конференц-зал "Академ"', 'Kyiv, conference hall "Academ"'),
+    organizer: ml('Науково-методичний центр НУШ', 'NUSh Scientific and Methodological Center'),
     maxParticipants: 80,
     registeredParticipants: 52,
     registrationDeadline: '2025-01-18',
@@ -54,15 +64,18 @@ export const calendarEvents: CalendarEvent[] = [
   // Students events
   {
     id: '4',
-    title: 'Всеукраїнська олімпіада з математики',
+    title: ml('Всеукраїнська олімпіада з математики', 'All-Ukrainian Mathematics Olympiad'),
     date: '2024-12-28',
     time: '10:00',
     endTime: '14:00',
     category: 'students',
-    type: 'Олімпіада',
-    description: 'Фінальний етап олімпіади для учнів 9-11 класів.',
-    location: 'Київ, Академія',
-    organizer: 'Оргкомітет олімпіади',
+    type: ml('Олімпіада', 'Olympiad'),
+    description: ml(
+      'Фінальний етап олімпіади для учнів 9-11 класів.',
+      'Final stage of the Olympiad for students in grades 9-11.'
+    ),
+    location: ml('Київ, Академія', 'Kyiv, Academy'),
+    organizer: ml('Оргкомітет олімпіади', 'Olympiad Organizing Committee'),
     maxParticipants: 200,
     registeredParticipants: 156,
     registrationDeadline: '2024-12-20',
@@ -70,14 +83,17 @@ export const calendarEvents: CalendarEvent[] = [
   },
   {
     id: '5',
-    title: 'Науковий конкурс МАН',
+    title: ml('Науковий конкурс МАН', 'MAN Scientific Competition'),
     date: '2025-01-25',
     time: '11:00',
     category: 'students',
-    type: 'Конкурс',
-    description: 'Презентація та захист наукових робіт учнів Малої академії наук.',
-    location: 'Київ, НАН України',
-    organizer: 'МАН України',
+    type: ml('Конкурс', 'Competition'),
+    description: ml(
+      'Презентація та захист наукових робіт учнів Малої академії наук.',
+      'Presentation and defense of scientific works by students of the Minor Academy of Sciences.'
+    ),
+    location: ml('Київ, НАН України', 'Kyiv, National Academy of Sciences of Ukraine'),
+    organizer: ml('МАН України', 'MAN of Ukraine'),
     maxParticipants: 150,
     registeredParticipants: 89,
     registrationDeadline: '2025-01-15',

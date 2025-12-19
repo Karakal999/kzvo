@@ -1,0 +1,97 @@
+{
+  "title": "About Academy",
+  "meta_description": "Academy of Pedagogical Education is a leading institution for professional development of educators in Ukraine",
+  "hero": {
+    "title": "Academy of Pedagogical Education",
+    "subtitle": "Developing pedagogical excellence",
+    "description": "A leading center for professional development of educators with over 30 years of experience"
+  },
+  "sections": {
+    "history": {
+      "title": "Academy History",
+      "subtitle": "Over 30 years of experience",
+      "content": "The Academy of Pedagogical Education was founded in 1991 as a center for teacher professional development. Over the years, the academy has trained thousands of highly qualified educational professionals.",
+      "milestones": {
+        "1991": "Academy foundation",
+        "2000": "Obtained higher education institution status",
+        "2010": "Launch of master's programs",
+        "2020": "Digital transformation of educational process"
+      }
+    },
+    "structure": {
+      "title": "Academy Structure",
+      "subtitle": "Organizational structure",
+      "departments": {
+        "title": "Departments and Units",
+        "pedagogical": "Department of Pedagogy",
+        "psychology": "Department of Psychology",
+        "methodology": "Department of Teaching Methodology",
+        "management": "Department of Educational Management",
+        "foreign_languages": "Department of Foreign Languages",
+        "ict": "Department of Information and Communication Technologies"
+      },
+      "divisions": {
+        "title": "Divisions",
+        "library": "Scientific Library",
+        "research": "Research Center",
+        "publishing": "Publishing Center",
+        "methodological": "Methodological Center"
+      }
+    },
+    "management": {
+      "title": "Academy Leadership",
+      "subtitle": "Team of professionals",
+      "positions": {
+        "rector": "Rector",
+        "vice_rector_academic": "Vice-Rector for Academic Affairs",
+        "vice_rector_scientific": "Vice-Rector for Research",
+        "vice_rector_development": "Vice-Rector for Development",
+        "director_institute": "Institute Director"
+      }
+    },
+    "documents": {
+      "title": "Official Documents",
+      "subtitle": "Official documentation",
+      "categories": {
+        "charter": "Charter",
+        "licenses": "Licenses and Accreditations",
+        "regulations": "Regulations and Rules",
+        "reports": "Activity Reports",
+        "orders": "Orders and Directives"
+      }
+    },
+    "public_info": {
+      "title": "Public Information",
+      "subtitle": "Open data",
+      "items": {
+        "anti_corruption": "Anti-Corruption Program",
+        "quality_assurance": "Quality Assurance System",
+        "financial_reports": "Financial Reports",
+        "procurement": "Procurement",
+        "admissions": "Admission Rules",
+        "academic_calendar": "Academic Calendar"
+      }
+    },
+    "achievements": {
+      "title": "Achievements",
+      "subtitle": "Our successes",
+      "stats": {
+        "graduates": "Graduates annually",
+        "programs": "Educational programs",
+        "teachers": "Teachers",
+        "partners": "Partners"
+      }
+    },
+    "partners": {
+      "title": "Partners",
+      "subtitle": "International cooperation",
+      "description": "The Academy actively cooperates with leading educational institutions in Ukraine and worldwide"
+    }
+  },
+  "cta": {
+    "title": "Join Us",
+    "description": "Become part of the professional community of educators",
+    "button": "Apply Now"
+  }
+}
+

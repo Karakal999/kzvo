@@ -17,7 +17,7 @@
 ```
 KZVO/
 ├── src/
-│   ├── components/       # Переиспользовані компоненти UI
+│   ├── components/       # Повторно використовувані компоненти UI
 │   │   ├── Header.tsx    # Шапка сайту з навігацією
 │   │   └── Footer.tsx    # Підвал сайту
 │   │
@@ -128,10 +128,10 @@ npm install
 # Запуск у режимі розробки (http://localhost:5173)
 npm run dev
 
-# Збірка для продакшену
+# Збірка для production
 npm run build
 
-# Попередній перегляд продакшен-збірки
+# Попередній перегляд production-збірки
 npm run preview
 
 # Перевірка коду (ESLint)
