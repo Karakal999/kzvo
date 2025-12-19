@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 import CalendarWidget from '../components/CalendarWidget';
 import NewsSection from '../components/NewsSection';
 import Announcements from '../components/Announcements';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../locales/translations';
 
 const Home = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const audienceButtons = [
-    { id: 'teacher', label: 'Я вчитель', icon: <GraduationCap className="h-6 w-6" /> },
-    { id: 'student', label: 'Я учень', icon: <BookOpen className="h-6 w-6" /> },
-    { id: 'applicant', label: 'Я абітурієнт', icon: <Users className="h-6 w-6" /> },
+    { id: 'teacher', label: t['home.i_am_teacher'], icon: <GraduationCap className="h-6 w-6" /> },
+    { id: 'student', label: t['home.i_am_student'], icon: <BookOpen className="h-6 w-6" /> },
+    { id: 'applicant', label: t['home.i_am_applicant'], icon: <Users className="h-6 w-6" /> },
   ];
 
   const quickLinksTeachers = [
@@ -96,12 +100,12 @@ const Home = () => {
 
             {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Академія педагогічної освіти
+              {t['home.title']}
             </h1>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Простір для розвитку вчителів та учнів
+              {t['home.subtitle']}
             </p>
 
             {/* Audience Selector Buttons */}
@@ -121,15 +125,15 @@ const Home = () => {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-accent mb-1">500+</div>
-                <div className="text-sm">Випускників щороку</div>
+                <div className="text-sm">{t['home.graduates']}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-accent mb-1">50+</div>
-                <div className="text-sm">Освітніх програм</div>
+                <div className="text-sm">{t['home.programs']}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                 <div className="text-3xl font-bold text-accent mb-1">25+</div>
-                <div className="text-sm">Років досвіду</div>
+                <div className="text-sm">{t['home.experience']}</div>
               </div>
             </div>
           </div>
@@ -166,7 +170,7 @@ const Home = () => {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
-            Швидкий доступ
+            {t['home.quick_access']}
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -176,7 +180,7 @@ const Home = () => {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <GraduationCap className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Для вчителів</h3>
+                <h3 className="text-2xl font-bold text-primary">{t['home.for_teachers']}</h3>
               </div>
               <div className="space-y-4">
                 {quickLinksTeachers.map((link, index) => (
@@ -238,7 +242,7 @@ const Home = () => {
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary">Для абітурієнтів</h3>
+                <h3 className="text-2xl font-bold text-primary">{t['home.for_applicants']}</h3>
               </div>
               <div className="space-y-4">
                 {quickLinksApplicants.map((link, index) => (

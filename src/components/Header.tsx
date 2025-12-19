@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import { Menu, X, Search, GraduationCap } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import SearchModal from './SearchModal';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../locales/translations';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [language, setLanguage] = useState<'UA' | 'EN'>('UA');
+  const { language, setLanguage } = useLanguage();
 
   // Global Ctrl+K handler
   useEffect(() => {
@@ -21,19 +23,21 @@ const Header = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  const t = translations[language];
+  
   const navItems = [
-    { path: '/about', label: 'ПРО АКАДЕМІЮ' },
-    { path: '/activity', label: 'ДІЯЛЬНІСТЬ' },
-    { path: '/education', label: 'ОСВІТА ПРОГРАМИ' },
-    { path: '/teachers', label: 'ВЧИТЕЛЮ' },
-    { path: '/students', label: 'УЧНЯМ/КОНКУРСИ' },
-    { path: '/resources', label: 'РЕСУРСИ' },
-    { path: '/news', label: 'НОВИНИ' },
-    { path: '/contacts', label: 'КОНТАКТИ' },
+    { path: '/about', label: t['nav.about'] },
+    { path: '/activity', label: t['nav.activity'] },
+    { path: '/education', label: t['nav.education'] },
+    { path: '/teachers', label: t['nav.teachers'] },
+    { path: '/students', label: t['nav.students'] },
+    { path: '/resources', label: t['nav.resources'] },
+    { path: '/news', label: t['nav.news'] },
+    { path: '/contacts', label: t['nav.contacts'] },
   ];
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'UA' ? 'EN' : 'UA');
+    setLanguage(language === 'UA' ? 'EN' : 'UA');
   };
 
   return (
@@ -42,8 +46,8 @@ const Header = () => {
       <div className="bg-primary text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
-            <span>📧 info@academy.ua</span>
-            <span className="hidden md:inline">📞 +380 (44) 123-45-67</span>
+            <span>📧 {t['header.email']}</span>
+            <span className="hidden md:inline">📞 {t['header.phone']}</span>
           </div>
           <div className="flex items-center space-x-4">
             {/* Language Switcher */}
@@ -70,10 +74,10 @@ const Header = () => {
             </div>
             <div className="hidden lg:block">
               <div className="text-primary font-bold text-lg leading-tight">
-                Академія
+                {t['header.academy']}
               </div>
               <div className="text-primary text-sm">
-                Педагогічної Освіти
+                {t['header.academy_full']}
               </div>
             </div>
           </Link>
@@ -97,8 +101,8 @@ const Header = () => {
             <button
               onClick={() => setIsSearchOpen(true)}
               className="p-2 text-gray-700 hover:text-primary hover:bg-gray-100 rounded-full transition-colors"
-              aria-label="Пошук (Ctrl+K)"
-              title="Пошук (Ctrl+K)"
+              aria-label={`${t['header.search']} (Ctrl+K)`}
+              title={`${t['header.search']} (Ctrl+K)`}
             >
               <Search className="h-5 w-5" />
             </button>
@@ -107,7 +111,7 @@ const Header = () => {
             <button
               className="xl:hidden p-2 text-gray-700 hover:text-primary hover:bg-gray-100 rounded-full transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Відкрити меню"
+              aria-label={t['header.menu']}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>

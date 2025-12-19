@@ -1,0 +1,133 @@
+export const translations = {
+  UA: {
+    // Header
+    'header.email': 'info@academy.ua',
+    'header.phone': '+380 (44) 123-45-67',
+    'header.academy': 'Академія',
+    'header.academy_full': 'Педагогічної Освіти',
+    'header.search': 'Пошук',
+    'header.menu': 'Меню',
+    
+    // Navigation
+    'nav.about': 'ПРО АКАДЕМІЮ',
+    'nav.activity': 'ДІЯЛЬНІСТЬ',
+    'nav.education': 'ОСВІТА ПРОГРАМИ',
+    'nav.teachers': 'ВЧИТЕЛЮ',
+    'nav.students': 'УЧНЯМ/КОНКУРСИ',
+    'nav.resources': 'РЕСУРСИ',
+    'nav.news': 'НОВИНИ',
+    'nav.contacts': 'КОНТАКТИ',
+    
+    // Footer
+    'footer.about_academy': 'Про академію',
+    'footer.description': 'Академія педагогічної освіти — провідний заклад підвищення кваліфікації педагогічних працівників України.',
+    'footer.quick_links': 'Швидкі посилання',
+    'footer.contacts': 'Контакти',
+    'footer.address': 'вул. Педагогічна, 15, Київ, 01001',
+    'footer.follow_us': 'Соціальні мережі',
+    'footer.rights': 'Всі права захищені',
+    'footer.privacy': 'Політика конфіденційності',
+    'footer.terms': 'Умови використання',
+    
+    // Home page
+    'home.title': 'Академія педагогічної освіти',
+    'home.subtitle': 'Простір для розвитку вчителів та учнів',
+    'home.i_am_teacher': 'Я вчитель',
+    'home.i_am_student': 'Я учень',
+    'home.i_am_applicant': 'Я абітурієнт',
+    'home.graduates': 'Випускників щороку',
+    'home.programs': 'Освітніх програм',
+    'home.experience': 'Років досвіду',
+    'home.quick_access': 'Швидкий доступ',
+    'home.for_teachers': 'Для вчителів',
+    'home.for_students': 'Для учнів',
+    'home.for_applicants': 'Для абітурієнтів',
+    
+    // Common
+    'common.read_more': 'Читати далі',
+    'common.all_news': 'Всі новини',
+    'common.view_calendar': 'Весь календар',
+    'common.download': 'Завантажити',
+    'common.preview': 'Переглянути',
+    'common.close': 'Закрити',
+    'common.search': 'Пошук',
+    'common.filter': 'Фільтр',
+    'common.sort': 'Сортувати',
+    'common.category': 'Категорія',
+    'common.date': 'Дата',
+    'common.all': 'Всі',
+    'common.register': 'Зареєструватися',
+    'common.contacts': 'Контакти',
+    'common.back': 'Назад',
+    'common.next': 'Далі',
+    'common.loading': 'Завантаження...',
+    'common.error': 'Помилка',
+  },
+  EN: {
+    // Header
+    'header.email': 'info@academy.ua',
+    'header.phone': '+380 (44) 123-45-67',
+    'header.academy': 'Academy',
+    'header.academy_full': 'of Pedagogical Education',
+    'header.search': 'Search',
+    'header.menu': 'Menu',
+    
+    // Navigation
+    'nav.about': 'ABOUT',
+    'nav.activity': 'ACTIVITY',
+    'nav.education': 'EDUCATION',
+    'nav.teachers': 'FOR TEACHERS',
+    'nav.students': 'FOR STUDENTS',
+    'nav.resources': 'RESOURCES',
+    'nav.news': 'NEWS',
+    'nav.contacts': 'CONTACTS',
+    
+    // Footer
+    'footer.about_academy': 'About Academy',
+    'footer.description': 'Academy of Pedagogical Education is a leading institution for professional development of educators in Ukraine.',
+    'footer.quick_links': 'Quick Links',
+    'footer.contacts': 'Contacts',
+    'footer.address': '15 Pedagogichna St., Kyiv, 01001',
+    'footer.follow_us': 'Social Media',
+    'footer.rights': 'All rights reserved',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Use',
+    
+    // Home page
+    'home.title': 'Academy of Pedagogical Education',
+    'home.subtitle': 'Space for development of teachers and students',
+    'home.i_am_teacher': 'I am a teacher',
+    'home.i_am_student': 'I am a student',
+    'home.i_am_applicant': 'I am an applicant',
+    'home.graduates': 'Graduates annually',
+    'home.programs': 'Educational programs',
+    'home.experience': 'Years of experience',
+    'home.quick_access': 'Quick Access',
+    'home.for_teachers': 'For Teachers',
+    'home.for_students': 'For Students',
+    'home.for_applicants': 'For Applicants',
+    
+    // Common
+    'common.read_more': 'Read more',
+    'common.all_news': 'All news',
+    'common.view_calendar': 'View calendar',
+    'common.download': 'Download',
+    'common.preview': 'Preview',
+    'common.close': 'Close',
+    'common.search': 'Search',
+    'common.filter': 'Filter',
+    'common.sort': 'Sort',
+    'common.category': 'Category',
+    'common.date': 'Date',
+    'common.all': 'All',
+    'common.register': 'Register',
+    'common.contacts': 'Contacts',
+    'common.back': 'Back',
+    'common.next': 'Next',
+    'common.loading': 'Loading...',
+    'common.error': 'Error',
+  },
+};
+
+export type TranslationKey = keyof typeof translations.UA;
+
