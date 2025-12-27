@@ -1,15 +1,18 @@
-import { Menu, X, Search, GraduationCap } from 'lucide-react';
+import { Menu, X, Search, GraduationCap, LogIn } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SearchModal from './SearchModal';
 import LanguageSwitcher from './LanguageSwitcher';
 import LinkWithLang from './LinkWithLang';
 import { useTranslation } from 'react-i18next';
-import { DebugLanguage } from './DebugLanguage';
+import { UserMenu } from './auth/UserMenu';
+import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { t } = useTranslation('navigation');
+  const { user } = useAuth();
 
   // Global Ctrl+K handler
   useEffect(() => {
@@ -37,7 +40,6 @@ const Header = () => {
 
   return (
     <>
-      <DebugLanguage />
       <header className="bg-white shadow-md sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-primary text-white py-2">
@@ -96,6 +98,19 @@ const Header = () => {
               <Search className="h-5 w-5" />
             </button>
 
+            {/* User Menu or Login Button */}
+            {user ? (
+              <UserMenu />
+            ) : (
+              <Link
+                to="/login"
+                className="hidden sm:flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors"
+              >
+                <LogIn className="h-4 w-4" />
+                <span>{t('auth.login.title', { defaultValue: 'Вхід' })}</span>
+              </Link>
+            )}
+
             {/* Mobile Menu Button */}
             <button
               className="xl:hidden p-2 text-gray-700 hover:text-primary hover:bg-gray-100 rounded-full transition-colors"
@@ -121,6 +136,18 @@ const Header = () => {
                   {item.label}
                 </LinkWithLang>
               ))}
+              
+              {/* Mobile Login Button */}
+              {!user && (
+                <Link
+                  to="/login"
+                  className="sm:hidden flex items-center justify-center space-x-2 px-4 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <LogIn className="h-4 w-4" />
+                  <span>{t('auth.login.title', { defaultValue: 'Вхід' })}</span>
+                </Link>
+              )}
             </div>
           </div>
         )}

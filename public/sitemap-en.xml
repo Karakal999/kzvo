@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://academy.ua/en/</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/about</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/about"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/activity</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/activity"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/education</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/education"/>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/teachers</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/teachers"/>
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/students</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/students"/>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/resources</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/resources"/>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/news</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/news"/>
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/contacts</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/contacts"/>
@@ -84,7 +84,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/events</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/events"/>
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/competitions</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/competitions"/>
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://academy.ua/en/programs</loc>
-    <lastmod>2025-12-19</lastmod>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="uk" href="https://academy.ua/uk/programs"/>

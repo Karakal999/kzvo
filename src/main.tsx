@@ -6,6 +6,7 @@ import './i18n/config' // Initialize i18n
 import './utils/resetLanguage' // Make resetLanguage() available in console
 import App from './App.tsx'
 import { LanguageProvider } from './context/LanguageContext'
+import { AuthProvider } from './context/AuthContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,9 +14,11 @@ createRoot(document.getElementById('root')!).render(
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
         <div className="text-xl">Завантаження...</div>
       </div>}>
-        <LanguageProvider>
-          <App />
-        </LanguageProvider>
+        <AuthProvider>
+          <LanguageProvider>
+            <App />
+          </LanguageProvider>
+        </AuthProvider>
       </Suspense>
     </HelmetProvider>
   </StrictMode>,

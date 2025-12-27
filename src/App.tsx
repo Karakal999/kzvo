@@ -32,6 +32,15 @@ const Events = lazy(() => import('./pages/Events'));
 const Competitions = lazy(() => import('./pages/Competitions'));
 const EducationPrograms = lazy(() => import('./pages/EducationPrograms'));
 
+// Auth pages
+const Login = lazy(() => import('./pages/Login'));
+const Register = lazy(() => import('./pages/Register'));
+const Profile = lazy(() => import('./pages/Profile'));
+const Admin = lazy(() => import('./pages/Admin'));
+
+// Import ProtectedRoute
+import { ProtectedRoute } from './components/auth/ProtectedRoute';
+
 /**
  * App Component with Language-aware Routing
  * 
@@ -49,6 +58,34 @@ function App() {
     <ErrorBoundary>
       <Router>
         <Routes>
+          {/* Auth routes (not language-specific) */}
+          <Route path="/login" element={
+            <Suspense fallback={<PageSkeleton />}>
+              <Login />
+            </Suspense>
+          } />
+          <Route path="/register" element={
+            <Suspense fallback={<PageSkeleton />}>
+              <Register />
+            </Suspense>
+          } />
+          
+          {/* Protected routes */}
+          <Route path="/profile" element={
+            <ProtectedRoute>
+              <Suspense fallback={<PageSkeleton />}>
+                <Profile />
+              </Suspense>
+            </ProtectedRoute>
+          } />
+          <Route path="/admin" element={
+            <ProtectedRoute requireAdmin={true}>
+              <Suspense fallback={<PageSkeleton />}>
+                <Admin />
+              </Suspense>
+            </ProtectedRoute>
+          } />
+          
           {/* Root redirect to default language */}
           <Route path="/" element={<Navigate to="/uk" replace />} />
           

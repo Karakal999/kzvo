@@ -10,6 +10,7 @@ import aboutUk from '../locales/uk/about.json';
 import newsUk from '../locales/uk/news.json';
 import mediaUk from '../locales/uk/media.json';
 import competitionsUk from '../locales/uk/competitions.json';
+import authUk from '../locales/uk/auth.json';
 
 import commonEn from '../locales/en/common.json';
 import navigationEn from '../locales/en/navigation.json';
@@ -18,6 +19,7 @@ import aboutEn from '../locales/en/about.json';
 import newsEn from '../locales/en/news.json';
 import mediaEn from '../locales/en/media.json';
 import competitionsEn from '../locales/en/competitions.json';
+import authEn from '../locales/en/auth.json';
 
 // Translation resources
 const resources = {
@@ -29,6 +31,7 @@ const resources = {
     news: newsUk,
     media: mediaUk,
     competitions: competitionsUk,
+    translation: authUk, // auth translations
   },
   en: {
     common: commonEn,
@@ -38,6 +41,7 @@ const resources = {
     news: newsEn,
     media: mediaEn,
     competitions: competitionsEn,
+    translation: authEn, // auth translations
   },
 };
 
@@ -62,7 +66,7 @@ i18n
     defaultNS: 'common',
     
     // Namespaces to load by default
-        ns: ['common', 'navigation', 'pages', 'about', 'news', 'media', 'competitions'],
+        ns: ['common', 'navigation', 'pages', 'about', 'news', 'media', 'competitions', 'translation'],
     
     // Interpolation options
     interpolation: {
